@@ -1,0 +1,35 @@
+<!-- your_template_name.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Create Battle Faction</title>
+</head>
+
+<body>
+    <h2>Create Battle Faction</h2>
+
+    <!-- Display form errors if any -->
+    {% if form.errors %}
+    <div class="alert alert-danger">
+        {% for field in form %}
+        {% for error in field.errors %}
+        <strong>{{ error }}</strong><br>
+        {% endfor %}
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- Form to create new Battle Faction -->
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <!-- Submit button -->
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>

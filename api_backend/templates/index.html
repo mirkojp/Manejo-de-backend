@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+    <style>
+        .rainbow-text {
+            background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to the Index Page</h1>
+
+    <h2>REST API Endpoints:</h2>
+    <ul>
+        <li><a href="{% url 'factions_rest' %}">Factions REST API</a></li>
+        <li><a href="{% url 'units_rest' %}">Units REST API</a></li>
+        <li><a href="{% url 'battle_factions_rest' %}">Battle Factions REST API</a></li>
+        <li><a href="{% url 'battles_rest' %}">Battles REST API</a></li>
+    </ul>
+
+    <h2>New Views:</h2>
+    <ul>
+        <li><a href="{% url 'new_faction' %}">New Faction</a></li>
+        <li><a href="{% url 'new_unit' %}">New Unit</a></li>
+        <li><a href="{% url 'new_battle_faction' %}">New Battle Faction</a></li>
+        <li><a href="{% url 'new_battle' %}">New Battle</a></li>
+    </ul>
+
+    <h2>List Views:</h2>
+    <ul>
+        <li><a href="{% url 'faction_list' %}">List of Factions</a></li>
+        <li><a href="{% url 'unit_list' %}">List of Units</a></li>
+        <li><a href="{% url 'battle_list' %}">List of Battles</a></li>
+        <li>Battle_factions are included in battle_list</li>
+    </ul>
+
+    <h2 class="rainbow-text">i dont like graphic design</h2>
+
+</body>
+
+</html>

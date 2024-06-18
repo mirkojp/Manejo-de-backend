@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Battles</title>
+</head>
+
+<body>
+    <h1>Battles</h1>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Factions</th>
+        </tr>
+        {% for battle in battles %}
+        <tr>
+            <td>{{ battle.name }}</td>
+            <td>{{ battle.date }}</td>
+            <td>
+                {% for battle_faction in battle.battlefaction_set.all %}
+                {{ battle_faction.faction.name }} ({{ battle_faction.outcome }})<br>
+                {% endfor %}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>

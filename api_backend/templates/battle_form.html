@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Create Battle</title>
+</head>
+
+<body>
+    <h2>Create Battle</h2>
+
+    <!-- Form to create new Battle -->
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+    
+        <!-- Submit button -->
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- Display form errors if any -->
+    {% if form.non_field_errors %}
+    <div class="alert alert-danger">
+        {% for error in form.non_field_errors %}
+        <strong>{{ error }}</strong><br>
+        {% endfor %}
+    </div>
+    {% endif %}
+</body>
+
+</html>

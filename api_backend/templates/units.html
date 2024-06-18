@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Units</title>
+</head>
+
+<body>
+    <h1>Units</h1>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Faction</th>
+            <th>Type</th>
+            <th>Strength</th>
+            <th>Description</th>
+        </tr>
+        {% for unit in units %}
+        <tr>
+            <td>{{ unit.name }}</td>
+            <td>{{ unit.faction.name }}</td>
+            <td>{{ unit.unit_type }}</td>
+            <td>{{ unit.strength }}</td>
+            <td>{{ unit.description }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>

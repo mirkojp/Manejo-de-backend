@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Factions</title>
+</head>
+
+<body>
+    <h1>Factions</h1>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+        </tr>
+        {% for faction in factions %}
+        <tr>
+            <td>{{ faction.name }}</td>
+            <td>{{ faction.description }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>
